@@ -1,0 +1,217 @@
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3835878/
+https://identity.utexas.edu/assets/uploads/publications/Ellington-2015-Keystroke-Analysis-Non-Invasive-Diagnosis-Neurodegenerative-Disease.pdf
+https://neuroqwerty.mit.edu/
+
+
+
+
+
+RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
+            max_depth=9, max_features=5, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_impurity_split=None,
+            min_samples_leaf=1, min_samples_split=2,
+            min_weight_fraction_leaf=0.0, n_estimators=130, n_jobs=1,
+            oob_score=False, random_state=6, verbose=0, warm_start=False)
+0.83626113182255402
+0.857142857143
+
+
+
+DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=7,
+            max_features=2, max_leaf_nodes=None, min_impurity_decrease=0.0,
+            min_impurity_split=None, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=7, splitter='random')
+0.80734634778192638
+0.763636363636            
+
+
+BaggingClassifier(base_estimator=GridSearchCV(cv=KFold(n_splits=5, random_state=31, shuffle=True),
+       error_score='raise',
+       estimator=DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None,
+            min_impurity_decrease=0.0, min_imp...', refit=True, return_train_score='warn',
+       scoring=make_scorer(performance_metric), verbose=0),
+         bootstrap=True, bootstrap_features=False, max_features=1.0,
+         max_samples=1.0, n_estimators=50, n_jobs=1, oob_score=False,
+         random_state=5, verbose=0, warm_start=False)
+0.846846846847
+
+
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1.2, learning_rate=0.005,
+       max_delta_step=0, max_depth=3, min_child_weight=5, missing=None,
+       n_estimators=100, n_jobs=1, nthread=None,
+       objective='binary:logistic', random_state=23, reg_alpha=0.01,
+       reg_lambda=1, scale_pos_weight=2, seed=8, silent=True, subsample=1)
+best score 0.6112
+array([[ 9, 16],
+       [ 2, 48]])
+f1 0.84,   precision 0.75,   recall 0.96
+Area under curve 0.7236
+
+
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1.2, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=120,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.01, reg_lambda=1, scale_pos_weight=2,
+       seed=8, silent=True, subsample=1)
+best score 0.6121
+
+array([[ 8, 17],
+       [ 2, 48]])
+f1 0.83,   precision 0.7385,   recall 0.96
+Area under curve 0.7632
+
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1.0, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=160,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.001, reg_lambda=1, scale_pos_weight=2,
+       seed=8, silent=True, subsample=1)
+best score 0.6026
+array([[ 8, 17],
+       [ 1, 49]])
+f1 0.84,   precision 0.7424,   recall 0.98
+Area under curve 0.7632
+
+
+
+XGBClassifier(base_score=0.5, booster='dart', colsample_bylevel=1,
+       colsample_bytree=1, gamma=0.85, learning_rate=0.005,
+       max_delta_step=0, max_depth=3, min_child_weight=5, missing=None,
+       n_estimators=300, n_jobs=1, nthread=None,
+       objective='binary:logistic', random_state=23, reg_alpha=0.01,
+       reg_lambda=5, scale_pos_weight=2, seed=None, silent=True,
+       subsample=1)
+best score 0.6864
+array([[ 8, 17],
+       [ 2, 48]])
+f1 0.83,   precision 0.7385,   recall 0.96
+Area under curve 0.7376
+
+
+XGBClassifier(base_score=0.5, booster='gblinear', colsample_bylevel=1,
+       colsample_bytree=1, gamma=0.9, learning_rate=0.005,
+       max_delta_step=0, max_depth=3, min_child_weight=2, missing=None,
+       n_estimators=1000, n_jobs=1, nthread=None,
+       objective='binary:logistic', random_state=23, reg_alpha=0.01,
+       reg_lambda=1, scale_pos_weight=3, seed=None, silent=True,
+       subsample=1)
+best score 0.6897
+array([[ 0, 25],
+       [ 1, 49]])
+f1 0.79,   precision 0.6622,   recall 0.98
+Area under curve 0.7496
+
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=200,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.001, reg_lambda=1, scale_pos_weight=2,
+       seed=None, silent=True, subsample=1)
+best score 0.7095
+array([[ 8, 17],
+       [ 1, 49]])
+f1 0.84,   precision 0.7424,   recall 0.98
+Area under curve 0.7704
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=2.93, learning_rate=0.01,
+       max_delta_step=0, max_depth=3, min_child_weight=5, missing=None,
+       n_estimators=149, n_jobs=1, nthread=None,
+       objective='binary:logistic', random_state=23, reg_alpha=0.001,
+       reg_lambda=1, scale_pos_weight=2, seed=None, silent=True,
+       subsample=1)
+best score 0.7367
+array([[ 7, 18],
+       [ 1, 49]])
+f1 0.84,   precision 0.7313,   recall 0.98
+Area under curve 0.7508
+
+
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=200,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.001, reg_lambda=1,
+       scale_pos_weight=0.8, seed=None, silent=True, subsample=1)
+best score 0.6721
+
+Confusion matrix:
+array([[ 4, 17],
+       [ 2, 37]])
+f1 0.8,   precision 0.6852,   recall 0.9487
+Area under curve 0.7851
+
+
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=100,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.001, reg_lambda=1,
+       scale_pos_weight=0.8, seed=None, silent=True, subsample=1)
+best score 0.6638
+array([[ 6, 15],
+       [ 2, 37]])
+f1 0.81,   precision 0.7115,   recall 0.9487
+Area under curve 0.7863
+
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=100,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.001, reg_lambda=1,
+       scale_pos_weight=0.85, seed=None, silent=True, subsample=1)
+best score 0.6601
+array([[ 6, 15],
+       [ 2, 37]])
+f1 0.81,   precision 0.7115,   recall 0.9487
+Area under curve 0.7906
+
+*
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=100,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.001, reg_lambda=1,
+       scale_pos_weight=0.81, seed=None, silent=True, subsample=1)
+best score 0.6694
+array([[ 6, 15],
+       [ 2, 37]])
+f1 0.81,   precision 0.7115,   recall 0.9487
+Area under curve 0.7979
+
+
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=1, gamma=1, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=100,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.001, reg_lambda=1,
+       scale_pos_weight=0.807, seed=None, silent=True, subsample=1)
+best score 0.6705
+array([[ 6, 15],
+       [ 2, 37]])
+f1 0.81,   precision 0.7115,   recall 0.9487
+Area under curve 0.7973
+
+**
+XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
+       colsample_bytree=0.8, gamma=1, learning_rate=0.01, max_delta_step=0,
+       max_depth=3, min_child_weight=5, missing=None, n_estimators=100,
+       n_jobs=1, nthread=None, objective='binary:logistic',
+       random_state=23, reg_alpha=0.001, reg_lambda=1,
+       scale_pos_weight=0.81, seed=None, silent=True, subsample=1)
+best score 0.6804
+array([[ 6, 15],
+       [ 2, 37]])
+f1 0.81,   precision 0.7115,   recall 0.9487
+Area under curve 0.8065
