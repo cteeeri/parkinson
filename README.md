@@ -18,5 +18,30 @@ Spyder 3.2.6 <br>
 Please proceed to PDReadme2.docx in documentation for detailed steps.
 ## Benchmark
 A crude, simple model like default parameterized support vector machine classifier or decision tree model could blatantly predict that everyone has Parkinson's disease and the precision would be 203/300 which is 67.7%, and recall will top at 100%. F1 score is logged at 80%. But the ROC AUC will suffer at 50%, which is useless as the model lose the ability to tell the difference. <br>
-![alt text](https://github.com/cteeeri/parkinson_keystroke/img.png)
+Below is another better benchmark score and graph for default Decision Tree classifier.
+![Benchmark Score](https://github.com/cteeeri/parkinson_keystroke/blob/master/doccs/benchmark_score.png)
+![Benchmark Graph](https://github.com/cteeeri/parkinson_keystroke/blob/master/doccs/benchmark_graph.png)
+
+## Results
+Many binary classifiers are tried. They includes bagging decision tree, bagging random forest, boosting gradientboosting, boosting XGBoost and voting ensemble involving classifiers mentioned. A lot of time is spent fine tuning hyperparameters, GridSeachCV is used to facilitate this task as well.
+The results are as follow:
+![Benchmark Score](https://github.com/cteeeri/parkinson_keystroke/blob/master/doccs/models_score.png)
+![Benchmark Graph](https://github.com/cteeeri/parkinson_keystroke/blob/master/doccs/vc_model_graph.png)
+Please also refer to PDReport.pdf for details.
+
+## Thanks to references below
+1.	Goldberger AL, Amaral LAN, Glass L, Hausdorff JM, Ivanov PCh, Mark RG, Mietus JE, Moody GB, Peng C-K, Stanley HE. PhysioBank, PhysioToolkit, and PhysioNet: Components of a New Research Resource for Complex Physiologic Signals. Circulation 101(23):e215-e220 [Circulation Electronic Pages; http://circ.ahajournals.org/content/101/23/e215]; 2000 (June 13). <br>
+2.	L. Giancardo, A. Sánchez-Ferro, T. Arroyo-Gallego, I. Butterworth, C. S. Mendoza, P. Montero, M. Matarazzo, J. A. Obeso, M. L. Gray, R. San José Estépar. Computer keyboard interaction as an indicator of early Parkinson's disease. Scientific Reports 6, 34468; doi: 10.1038/srep34468 (2016)
+3.	http://news.mit.edu/2015/typing-patterns-diagnose-early-onset-parkinsons-0401
+Anne Trafton, MIT News Office
+April 1, 2015 <br>
+4.	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5708704/
+Holger Fröhlich
+2017<br>
+5.	http://xgboost.readthedocs.io/en/latest/python/python_api.html<br>
+6.	https://machinelearningmastery.com/feature-importance-and-feature-selection-with-xgboost-in-python/<br>
+7.	https://www.kaggle.com/lct14558/imbalanced-data-why-you-should-not-use-roc-curve<br>
+8.	https://acutecaretesting.org/en/articles/precision-recall-curves-what-are-they-and-how-are-they-used<br>
+9.	https://jakevdp.github.io/PythonDataScienceHandbook/04.14-visualization-with-seaborn.html<br>
+
 
