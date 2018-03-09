@@ -9,3 +9,14 @@ Inspired by the study 'High-accuracy detection of early Parkinson's Disease usin
 The goal is to take in data sets provided by physionet.org for the study 'High-accuracy detection of early Parkinson's Disease using multiple characteristics of finger movement while typing' (Tappy keystroke data) and build a satisfactory binary classification model out of it. The model will be able to predict by using patient's keystroke data input if he or she has Parkinson's disease. 
 <br><br>
 There is another project also hosted by physio.net: neuroQWERTY MIT-CSXPD. The way keystroke data was acquired is different from the Tappy project but the difference is in the soft wares and environments set up. The data collected by neuroQWERTY have the similar attribute that Tappy project collected. The preliminary exploration has shown that they can be used together with Tappy data set thereby increasing the total volume of available data. 
+## Environment of this project:
+Anaconda Navigator 1.6.12<br>
+Python 3.6<br>
+Jupyter notebook 5.2.1<br>
+Spyder 3.2.6 <br>
+* special package needed: xgboost
+Please proceed to PDReadme2.docx in documentation for detailed steps.
+## Benchmark
+A crude, simple model like default parameterized support vector machine classifier or decision tree model could blatantly predict that everyone has Parkinson's disease and the precision would be 203/300 which is 67.7%, and recall will top at 100%. F1 score is logged at 80%. But the ROC AUC will suffer at 50%, which is useless as the model lose the ability to tell the difference. <br>
+![alt text](https://github.com/cteeeri/parkinson_keystroke/img.png)
+
